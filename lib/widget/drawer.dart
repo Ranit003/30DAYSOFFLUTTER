@@ -26,7 +26,7 @@ class MyDrawer extends StatelessWidget {
             ),
             const ListTile(
               leading:Icon(CupertinoIcons.home,
-                color: Colors.green,
+                color:Colors.green,
               ),
               title: Text('Home',style:TextStyle(
                 color: Colors.green,
