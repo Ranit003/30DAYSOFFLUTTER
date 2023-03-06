@@ -9,6 +9,12 @@ class CatalogModel{
       image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/ios/iphoto/ios15-iphone13-pro-home-camera-callout.png",
 
     )];
+  //get item by id
+    static Item getById(int id)=>items.firstWhere((element) =>element.id==id,orElse:null);
+
+//    get item by position
+    static Item getItemByPosition(int pos)=>items[pos];
+
 }
 
 
