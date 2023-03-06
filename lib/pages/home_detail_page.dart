@@ -10,10 +10,11 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(),
-      backgroundColor:MyTheme.creamColor,
+      appBar:AppBar(
+        backgroundColor: Colors.transparent),
+      backgroundColor:context.canvasColor,
       bottomNavigationBar:Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding:Vx.mOnly(right: 8),
@@ -21,10 +22,10 @@ class HomeDetailPage extends StatelessWidget {
             "\$${catalog.price}".text.bold.xl4.red800.make(),
             ElevatedButton(onPressed: (){},
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(MyTheme.darkBulishColor),
+                    backgroundColor: MaterialStateProperty.all(context.theme.primaryColor),
                     shape: MaterialStateProperty.all(StadiumBorder())
                 ),
-                child:"Buy".text.make()).wh(100, 50),
+                child:"Add to cart".text.make()).wh(120, 50),
           ],
          ).p32(),
       ),
@@ -36,17 +37,19 @@ class HomeDetailPage extends StatelessWidget {
           Hero(
               tag:Key(catalog.id.toString()),
         child: Image.network(catalog.image),
-          ).p32(),
+          ).pLTRB(150, 0,150, 0),
             Expanded(child:VxArc(
               height: 10.0,
               arcType: VxArcType.CONVEY,
               edge:VxEdge.TOP,
               child: Container(
-                color:Colors.white,
+                color:context.cardColor,
                 width: context.screenWidth,
                 child: Column(
-                  children: [catalog.name.text.xl4.color(MyTheme.darkBulishColor).bold.make(),
-                    catalog.desc.text.textStyle(context.captionStyle).xl.make(),10.heightBox],
+                  children: [catalog.name.text.xl4.color(context.primaryColor).bold.make(),
+                    catalog.desc.text.textStyle(context.captionStyle).xl.make(),10.heightBox,
+                      "ewigdx ,bhdjs.duixsk,dyigsxa,gdyudhhskj,wqftsauyguswqoiu,stwyfaSA,QWTFDSH,ygsddij".text.textStyle(context.captionStyle).make().p16()
+                  ],
                 ).py64(),
               ),
             ))

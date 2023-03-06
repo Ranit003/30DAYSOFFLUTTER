@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../../widget/themes.dart';
+
 
 class CatalogImage extends StatelessWidget {
   final String image;
@@ -8,6 +8,6 @@ class CatalogImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(image,
-    ).box.rounded.p16.color(MyTheme.creamColor).make().p16();
+    ).box.rounded.p16.color(context.canvasColor).make().p16();
   }
 }

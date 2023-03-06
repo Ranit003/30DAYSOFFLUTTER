@@ -48,10 +48,10 @@ class CatalogItem extends StatelessWidget {
                   "\$${catalog.price}".text.bold.xl.make(),
                   ElevatedButton(onPressed: (){},
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(MyTheme.darkBulishColor),
+                          backgroundColor: MaterialStateProperty.all(context.primaryColor),
                           shape: MaterialStateProperty.all(StadiumBorder())
                       ),
-                      child:"Buy".text.make())
+                      child:"Add to cart".text.make())
                 ],
               ),
             ],
