@@ -8,15 +8,15 @@ class CatalogModel{
   factory CatalogModel() => catModel;
 
   static List<Item> items=[
-    // Item(
-    //   id:1,
-    //   name:"iphone 12",
-    //   desc: "apple",
-    //   price: 999,
-    //   color: "#33505a",
-    //   image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/ios/iphoto/ios15-iphone13-pro-home-camera-callout.png",
-    //
-    // )
+    Item(
+      id:1,
+      name:"iphone 12",
+      desc: "apple",
+      price: 999,
+      color: "#33505a",
+      image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/ios/iphoto/ios15-iphone13-pro-home-camera-callout.png",
+
+    )
   ];
   //get item by id
       Item getById(int id)=>items.firstWhere((element) =>element.id==id,orElse:null);
@@ -29,7 +29,7 @@ class CatalogModel{
 
 
 class Item{
-  late final num id;
+  late final int id;
   late final String name;
   late final String desc;
   late final num price;
