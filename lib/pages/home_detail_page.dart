@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../models/catalog.dart';
 
+
 class HomeDetailPage extends StatelessWidget {
   final Item catalog;
   const HomeDetailPage({Key? key,required this.catalog}) :assert(catalog!=null), super(key: key);
@@ -23,7 +24,7 @@ class HomeDetailPage extends StatelessWidget {
             ElevatedButton(onPressed: (){},
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(context.theme.primaryColor),
-                    shape: MaterialStateProperty.all(StadiumBorder())
+                    shape: MaterialStateProperty.all(const StadiumBorder())
                 ),
                 child:"Add to cart".text.make()).wh(120, 50),
           ],
