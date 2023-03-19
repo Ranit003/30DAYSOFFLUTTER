@@ -4,9 +4,7 @@ class CartModel{
   late CatalogModel _catalog;
   //collection of ids
   final List<int> _itemIds=[];
-  static final cartModel=CartModel._internal();
-  CartModel._internal();
-  factory CartModel()=>cartModel;
+
 
   CatalogModel get catalog=>_catalog;
 
