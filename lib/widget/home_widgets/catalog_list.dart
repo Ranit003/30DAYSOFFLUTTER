@@ -51,7 +51,7 @@ class CatalogItem extends StatelessWidget {
               catalog.desc.text.textStyle(context.captionStyle).make(),10.heightBox,
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding:Vx.mOnly(right: 8),
+                buttonPadding:Vx.mOnly(right:8.0),
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
                   AddToCart(catalog:catalog)
